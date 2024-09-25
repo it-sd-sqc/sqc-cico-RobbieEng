@@ -220,6 +220,12 @@ public class Main {
     ((CardLayout)deck.getLayout()).show(deck, CARD_MAIN);
     fieldNumber.grabFocus();
   }
+  public static class NewFeatureHandler implements ActionListener {
+    public void actionPerformed(ActionEvent evt) {
+        // Implement the action for the new feature here
+        JOptionPane.showMessageDialog(deck, "you are logged out");
+    }
+}
 
   // Display name and new status //////////////////////////////////////////////
   // Module 3 tickets: Display user name and new status. Doesn't require a
@@ -228,6 +234,9 @@ public class Main {
     labelUser.setText(name);
     labelState.setText(isCheckedInNow ? "Checked IN" : "Checked OUT");
   }
+
+
+ 
 
   // Entry point //////////////////////////////////////////////////////////////
   // Our GUI code is very similar; however, we want to keep it explicit.
@@ -244,6 +253,13 @@ public class Main {
     frame.setPreferredSize(new Dimension(640, 480));
     frame.setMaximumSize(new Dimension(640, 480));
 
+    JButton buttonNewFeature = new JButton("Log out");
+    buttonNewFeature.setAlignmentX(JComponent.CENTER_ALIGNMENT);
+    buttonNewFeature.setForeground(Color.green);
+    buttonNewFeature.addActionListener(new NewFeatureHandler()); // Link to the action listener
+   
+
+
     // Collect each "card" panel in a deck.
     deck = new JPanel(new CardLayout());
     Font fontMain = new Font(Font.SANS_SERIF, Font.PLAIN, 24);
@@ -255,7 +271,7 @@ public class Main {
     panelMain.setPreferredSize(new Dimension(640, 480));
     panelMain.setMaximumSize(new Dimension(640, 480));
     panelMain.setBackground(Color.black);
-
+    panelMain.add(buttonNewFeature); // Add the new button to the main panel
     panelMain.add(Box.createVerticalGlue());
     JLabel labelDirective = new JLabel("Scan card", JLabel.LEADING);
     labelDirective.setFont(fontMain);
