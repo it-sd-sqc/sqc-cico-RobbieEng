@@ -271,7 +271,8 @@ public class Main {
     panelMain.setPreferredSize(new Dimension(640, 480));
     panelMain.setMaximumSize(new Dimension(640, 480));
     panelMain.setBackground(Color.black);
-    panelMain.add(buttonNewFeature); // Add the new button to the main panel
+     
+    //panelMain.add(buttonNewFeature); // Add the new button to the main panel
     panelMain.add(Box.createVerticalGlue());
     JLabel labelDirective = new JLabel("Scan card", JLabel.LEADING);
     labelDirective.setFont(fontMain);
