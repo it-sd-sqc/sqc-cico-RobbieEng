@@ -286,7 +286,16 @@ public class Main {
     frame.setPreferredSize(new Dimension(640, 480));
     frame.setMaximumSize(new Dimension(640, 480));
 
+<<<<<<< HEAD
   
+=======
+    JButton buttonNewFeature = new JButton("Log out");
+    buttonNewFeature.setAlignmentX(JComponent.CENTER_ALIGNMENT);
+    buttonNewFeature.setForeground(Color.green);
+    buttonNewFeature.addActionListener(new NewFeatureHandler()); // Link to the action listener
+   
+
+>>>>>>> button
 
     // Collect each "card" panel in a deck.
     deck = new JPanel(new CardLayout());
@@ -299,6 +308,10 @@ public class Main {
     panelMain.setPreferredSize(new Dimension(640, 480));
     panelMain.setMaximumSize(new Dimension(640, 480));
     panelMain.setBackground(Color.black);
+<<<<<<< HEAD
+=======
+     
+>>>>>>> button
     //panelMain.add(buttonNewFeature); // Add the new button to the main panel
     panelMain.add(Box.createVerticalGlue());
     JLabel labelDirective = new JLabel("Scan card", JLabel.LEADING);
