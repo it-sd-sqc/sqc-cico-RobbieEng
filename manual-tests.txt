@@ -61,4 +61,13 @@ Use `./build.sh` to build CiCo and `./run.sh` to run it if using the command lin
 ## Expected results
 * Should display "Developer" for the user name.
 
+# Module 6: Display updated color scheme.
+## Test steps
+1. Build and run CiCo.
+2. Enter 00000000 into the field and click Update.
+3. Wait for status panel to close.
+4. Enter 99999999 into the field and click Update.
+
+## Expected results
+* Each panel should display the updated color scheme.
 
